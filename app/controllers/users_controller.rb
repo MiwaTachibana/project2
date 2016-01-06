@@ -6,6 +6,10 @@ class UsersController < ApplicationController
     @users = User.all.order('id ASC')
   end
 
+ def about
+   
+ end
+
   def new
     @user = User.new
   end

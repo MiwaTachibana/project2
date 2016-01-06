@@ -1,18 +1,21 @@
 Rails.application.routes.draw do
 
+
   get 'sessions/new'
 
-  get 'sessions/create'
+  post 'sessions/create'
 
-  get 'sessions/destroy'
+  delete 'sessions/destroy' 
 
   root 'users#index'
   
   get 'users/index' => 'users#index'
 
+  get 'users/about' => 'users#about'
+
   get 'users/new' => 'users#new', as: :new_user
 
-  post 'users/create' => 'users#create'
+  post 'users/' => 'users#create'
 
   get 'users/show' => 'users#show', as: :user
 
