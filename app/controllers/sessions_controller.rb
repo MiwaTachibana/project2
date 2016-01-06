@@ -4,15 +4,19 @@ class SessionsController < ApplicationController
 
   def create
   	user = User.find_by_email(parmas[:email])
-  	if user && user.authenticate(params[:password])
+  	if user && user.authenticate(params[:login][:password])
+      session[:user_id] = user.id
   		redirect_to root_path, notice: "logged in!"
   	else
   		flash.now.alert = "invalid login credentials"
   		render "new"
   	end
+
+
   end
 
   def destroy
-  	redirect_to root_url, notice: "logged out!"
+  	session[:user_id] = nil
+    redirect_to root_url, notice: "logged out!"
   end
 end

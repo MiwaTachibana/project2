@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
 
 
-  get 'sessions/new'
-
-  post 'sessions/create'
-
-  delete 'sessions/destroy' 
+  
 
   root 'users#index'
   
@@ -17,13 +13,20 @@ Rails.application.routes.draw do
 
   post 'users/' => 'users#create'
 
-  get 'users/show' => 'users#show', as: :user
+  get 'users/:id' => 'users#show', as: :user
 
-  get 'users/edit' => 'users#edit', as: :edit_user
+  get 'users/:id/edit' => 'users#edit', as: :edit_user
 
-  patch 'users/update' => 'users#update'
+  patch 'users/:id' => 'users#update'
 
-  delete 'users/destroy' => 'users#destroy'
+  delete 'users/:id' => 'users#destroy'
+
+  #sessions
+  get 'login' => 'sessions#new', as: :login_form
+
+  post 'sessions/create' => 'sessions#create'
+
+  delete 'sessions/destroy' 
 
   resources :users, only: [:new, :index, :create]
 
