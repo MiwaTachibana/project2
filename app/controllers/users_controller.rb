@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :authorize, only: [:show]
+
   def index
     @users = User.all.order('id ASC')
   end

@@ -6,15 +6,15 @@ Rails.application.routes.draw do
 
   get 'users/new' => 'users#new', as: :new_user
 
-  get 'users/create' => 'users#create'
+  post 'users/create' => 'users#create'
 
   get 'users/show' => 'users#show', as: :user
 
   get 'users/edit' => 'users#edit', as: :edit_user
 
-  get 'users/update' => 'users#update'
+  patch 'users/update' => 'users#update'
 
-  get 'users/destroy' => 'users#destroy'
+  delete 'users/destroy' => 'users#destroy'
 
   resources :users, only: [:new, :index, :create]
 
