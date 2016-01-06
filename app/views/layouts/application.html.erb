@@ -19,9 +19,12 @@
 
 <div class="container">
 
-<% flash.each do |name, msg| %>
-	<%= content_tag(:div, msg, class: "alert alert-info") %>
-<%end%>
+<% if current_user %>
+  <p> Hello <%= current_user.name %> </p>
+  <%= link_to 'Logout', sessions_path, method: :delete, data: {confirm: 'Are you sure?'} %>
+<% else %>
+  <%= link_to 'Please login', login_path %>
+<% end %>
 
 	<%= yield %>
 </div>

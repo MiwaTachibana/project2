@@ -13,7 +13,14 @@ class ApplicationController < ActionController::Base
   end
 
   def authorize
-  	re
+  	redirect_to login_path unless logged_in?
+  end
+
+  def authenticate
+      unless logged_in?
+        flash[:error] = "You must be logged in to access this section of the site"
+        redirect_to login_url
+      end
   end
 
 end

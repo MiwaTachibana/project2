@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'secret/public_info'
 
-  
+  get 'secret/secret'
 
   root 'users#index'
   
@@ -26,7 +27,7 @@ Rails.application.routes.draw do
 
   post 'sessions/create' => 'sessions#create'
 
-  delete 'sessions/destroy' 
+  delete 'logout' => 'sessions#destroy' 
 
   resources :users, only: [:new, :index, :create]
 
