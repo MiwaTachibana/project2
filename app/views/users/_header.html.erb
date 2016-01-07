@@ -8,7 +8,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Miwa's Site</a>
+      <%= link_to 'Miwas Site', root_path, class: 'navbar-brand'%>
+      
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -38,6 +39,19 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to 'About Me', users_about_path %></li>
         <li><%= link_to 'Home', users_path%></li>
+
+        <% if current_user %>
+          <li><%= link_to 'Logout', sessions_path, method: :delete, data: {confirm: 'Are you sure?'} %></li>
+
+        <%else%>
+  
+
+        <li><%= link_to 'Login', new_session_path, class: 'btn btn-primary' %></li>
+        <li><%= link_to 'Sign Up', new_user_path, class: 'btn btn-primary' %></li>
+        <%end%>
+
+        
+
      
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>

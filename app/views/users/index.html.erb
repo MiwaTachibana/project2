@@ -6,9 +6,13 @@
 		<%= link_to user.name, user_path(user) %> 
 	<%end%>
 
+	<% if current_user %>
+	 
+	 <%else%>
 	
 
-	<%= link_to 'Login', login_form_path, class: 'btn btn-primary' %>
+	<%= link_to 'Login', new_session_path, class: 'btn btn-primary' %>
 	<%= link_to 'Sign Up', new_user_path, class: 'btn btn-primary' %>
-
+	<%end%>
+	
 </div>

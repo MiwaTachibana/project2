@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+
+
+
   get 'secret/public_info'
 
   get 'secret/secret'
@@ -29,11 +32,49 @@ Rails.application.routes.draw do
 
   delete 'logout' => 'sessions#destroy' 
 
-  resources :users, only: [:new, :index, :create]
+  resources :users
 
-  get 'login', to: 'sessions#new'
-  delete "logout", to: "sessions#destroy"
-  resources :sessions, only: [ :create]
+  # get 'login', to: 'sessions#new'
+  # delete "logout", to: "sessions#destroy"
+  resources :sessions
+
+  #  root 'users#index'
+  # get '/users' => 'users#index', as: :users
+
+  # post '/users' => 'users#create'
+
+  # get '/users/new' => 'users#new', as: :new_user
+
+  # get '/users/:id/edit' => 'users#edit', as: :edit_user
+
+  # get '/users/:id' => 'users#show', as: :user
+
+  # put '/users/:id' => 'users#update'
+
+  # delete '/users/:id' => 'users#destroy'
+
+  # get '/users/about' => 'users#about', as: :users_about
+
+  # #sessions
+
+  # get '/sessions' => 'sessions#index'
+
+  # post '/sessions' => 'sessions#create'
+
+  # get 'login' => 'sessions#new', as: :new_session
+
+  # get '/sessions/:id/:edit' => 'sessions#edit', as: :edit_session
+
+  # get '/session/:id' => 'session#show', as: :session
+
+  # put '/sessions/:id' => 'session#update'
+
+  # delete 'logout' => 'session#destroy'
+
+
+
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
