@@ -3,6 +3,34 @@ Rails.application.routes.draw do
 
 
 
+  get 'posts/index'
+
+  get 'posts/show'
+
+  get 'posts/new'
+
+  get 'posts/edit'
+
+  get 'posts/create'
+
+  get 'posts/update'
+
+  get 'posts/destroy'
+
+  get 'pins/index'
+
+  get 'pins/show'
+
+  get 'pins/new'
+
+  get 'pins/edit'
+
+  get 'pins/create'
+
+  get 'pins/update'
+
+  get 'pins/destroy'
+
   get 'secret/public_info'
 
   get 'secret/secret'
