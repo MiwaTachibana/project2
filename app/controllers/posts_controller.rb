@@ -19,6 +19,7 @@ class PostsController < ApplicationController
   end
 
   def create
+    # @post = Post.create( post_params )
     @post = current_user.posts.build(post_params)
     # @post = Post.new(post_params)
 
@@ -77,12 +78,13 @@ def authenticate
   end
 
 
+
 private
   def set_post
     @post = Post.find(params[:id])
   end
 
   def post_params
-    params.require(:post).permit(:title, :description, :content, :is_completed)
+    params.require(:post).permit(:title, :description, :image, :content, :is_completed)
   end
 end
