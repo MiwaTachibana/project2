@@ -5,10 +5,10 @@
 <table>
   <thead>
     <tr>
+      <th>Image</th>
       <th>Descripton</th>
       <th>Title</th>
-      <th>Content</th>
-      <th>Is completed</th>
+      
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,6 +16,7 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
+        <td><%= image_tag post.image.url(:thumb) %>
         <td><%= post.description %></td>
         
         <td><%= link_to 'Show', post %></td>
