@@ -41,7 +41,7 @@
         <li><%= link_to 'Home', users_path%></li>
 
         <% if current_user %>
-          <li><%= link_to 'Logout', sessions_path, method: :delete, data: {confirm: 'Are you sure?'} %></li>
+          <li><%= link_to 'Logout', logout_path, method: :delete, data: {confirm: 'Are you sure?'} %></li>
           <li><%= link_to 'See Your Posts', posts_path %>
           <li><%= link_to 'Make a New Pin', new_post_path %>
 
