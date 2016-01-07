@@ -2,38 +2,24 @@ Rails.application.routes.draw do
 
 
 
+#posts
 
-  get 'posts/index'
+  get 'posts' => 'posts#index', as: :posts
+  
+  post 'posts' => 'posts#create'
 
-  get 'posts/show'
+  get 'posts/new' => 'posts#new', as: :new_post
 
-  get 'posts/new'
+  get 'posts/:id/edit' => 'posts#edit', as: :edit_post
 
-  get 'posts/edit'
+  get 'posts/:id' => 'posts#show', as: :post
 
-  get 'posts/create'
+  put 'posts/:id' => 'posts#update'
 
-  get 'posts/update'
+  delete 'posts/:id' => 'posts#destroy'
 
-  get 'posts/destroy'
 
-  get 'pins/index'
-
-  get 'pins/show'
-
-  get 'pins/new'
-
-  get 'pins/edit'
-
-  get 'pins/create'
-
-  get 'pins/update'
-
-  get 'pins/destroy'
-
-  get 'secret/public_info'
-
-  get 'secret/secret'
+  #users
 
   root 'users#index'
   
