@@ -7,6 +7,7 @@
 <table>
   <thead>
     <tr>
+      <th>Descripton</th>
       <th>Title</th>
       <th>Content</th>
       <th>Is completed</th>
@@ -17,10 +18,9 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td><%= post.title %></td>
-        <td><%= post.content %></td>
-        <td><%= post.is_completed %></td>
-        <td><%= link_to 'Show', todo %></td>
+        <td><%= post.description %></td>
+        
+        <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

@@ -32,7 +32,7 @@ class PostsController < ApplicationController
     respond_to do |format|
       if @post.update(post_params)
         format.html {redirect_to @post, notice: 'Post was successfully updated.'}
-        format.json {render :show, status :ok, location: @post}
+        format.json {render :show, status: :ok, location: @post}
       else
         format.html {rendr :edit}
         format.json {render json: @post.errors, status: :unprocessable_entity}
@@ -54,6 +54,6 @@ private
   end
 
   def post_params
-    params.require(:post).permit(:title, :content, :is_completed)
+    params.require(:post).permit(:title, :description, :content, :is_completed)
   end
 end

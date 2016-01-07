@@ -3,19 +3,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @post.title %>
+	<strong>Description: </strong>
+	<%= @post.description %>
 </p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
 
-<p>
-  <strong>Is completed:</strong>
-  <%= @post.is_completed %>
-</p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
