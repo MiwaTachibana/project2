@@ -30,6 +30,8 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 
 gem 'paperclip', '~> 4.3', '>= 4.3.2'
 
+gem 'aws-sdk', '~> 2.2', '>= 2.2.9'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
