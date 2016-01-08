@@ -1,13 +1,13 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :about, :edit, :update, :destroy]
-  before_action :authorize, only: [:show, :about]
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :authorize, only: [:show ]
 
   def index
     @users = User.all.order('id ASC')
   end
 
- def about
-   
+ def myposts
+   @posts = current_user.posts
  end
 
   def new

@@ -40,11 +40,12 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to raw('<span class="glyphicon glyphicon-home"></span> Home'), root_path%></li>
-        <li><%= link_to 'About Me', users_about_path %></li>
+        
         
         <li><%= link_to raw('<span class="glyphicon glyphicon-th-list"></span> See Posts'), posts_path %>
 
         <% if current_user %>
+          <li><%=link_to 'My Posts', users_myposts_path%>
           <li><%= link_to raw('<span class="glyphicon glyphicon-plus"></span> Make a New Pin'), new_post_path %>
           <li><%= link_to 'Logout', logout_path, method: :delete, data: {confirm: 'Are you sure?'} %></li>
 

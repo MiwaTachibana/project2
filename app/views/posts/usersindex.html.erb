@@ -1,0 +1,9 @@
+<% if @posts.empty? %> 
+  <span>Sorry, post is empty </span>
+<% else %>
+  <%= @posts.each do |p| %>
+   <% if p.user_id == current_user.id %>
+    <% link_to "edit", edit_path(p) %>
+   <% end %>
+  <% end %>
+<% end %>

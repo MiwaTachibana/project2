@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   get 'posts/:id' => 'posts#show', as: :post
 
-  
+  get 'usersindex' => 'posts#usersindex', as: :posts_usersindex
 
   put 'posts/:id' => 'posts#update'
 
@@ -29,6 +29,8 @@ Rails.application.routes.draw do
   get 'users/index' => 'users#index'
 
   get 'users/about' => 'users#about'
+
+  get 'users/myposts' => 'users#myposts'
 
   get 'users/new' => 'users#new', as: :new_user
 
@@ -49,6 +51,9 @@ Rails.application.routes.draw do
 
   delete 'logout' => 'sessions#destroy' 
 
+
+
+  resources :posts
   resources :users
 
   # get 'login', to: 'sessions#new'

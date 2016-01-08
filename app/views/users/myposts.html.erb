@@ -1,0 +1,23 @@
+<div id="posts" class="transitions-enabled infinite-scroll clearfix">
+	<% if @posts.empty? %> 
+	  <span>Sorry, post is empty </span>
+	<% else %>
+    	<% @posts.each do |post| %>
+      
+ 			<div class="box">
+		        <%= link_to image_tag(post.image.url(:medium) ), post%> <br/>
+		        <%= post.description %> <br/>
+		        <strong><%= post.user.name if post.user %> </strong>
+
+		        <%= link_to raw('<span class="glyphicon glyphicon-edit"></span> Edit'), edit_post_path(post) %>
+
+            <%= link_to raw('<span class="glyphicon glyphicon-trash"></span> Delete'), post, method: :delete, data: { confirm: 'Are you sure?' } %> 
+            
+		       <%end%>
+
+
+
+ 		 </div>
+ 		 <%end%>
+  </div>
+

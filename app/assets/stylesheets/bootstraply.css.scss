@@ -1,6 +1,8 @@
 $navbar-height: 50px;
 $navbar-default-brand-color: #ff4d4d;
 $jumbotron-heading-color: #FF4D4D;
+$body-bg: #E9E9E9;
+$navbar-default-bg: #FFFFFF;
 
 
 
@@ -68,4 +70,8 @@ $jumbotron-heading-color: #FF4D4D;
 	font-family: 'Big Caslon', 'Book Antiqua', 'Palatino Linotype', Georgia, serif;;
 	display: inline;
 
+}
+
+.panel-heading center{
+	background: white;
 }
