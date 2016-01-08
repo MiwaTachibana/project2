@@ -1,6 +1,6 @@
 <%=render 'users/index'%>
       
-  <div id="posts" class="transitions-enabled infinite-scroll clearfix">
+  <div id="posts" class="transitions-enabled">
     <% @posts.each do |post| %>
       
  	<div class="box">
@@ -16,8 +16,6 @@
             <%= link_to raw('<span class="glyphicon glyphicon-trash"></span> Delete'), post, method: :delete, data: { confirm: 'Are you sure?' } %> 
 
             <%end%>
-        
-   
       </div>
     <% end %>
  </div>
