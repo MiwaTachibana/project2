@@ -21,7 +21,7 @@ Members can see a listing of all the posts they've liked.
 
 * Bootstrap-SASS ~> 3.3.4
 
-# masonry
+* masonry
 
 * imagemagick
 
