@@ -4,10 +4,11 @@ class PostsController < ApplicationController
   before_action :correct_user, only: [:edit, :update, :destroy]
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order("created_at DESC")
   end
 
   def show
+
   end
 
   def new
@@ -65,9 +66,11 @@ end
 
 
 
+
+
 def authenticate
     unless logged_in?
-        flash[:error] = "You must be logged in to access this section of the site"
+        flash[:error] = "Woops! You have be logged in to see this"
         redirect_to login_form_url
       end
   end

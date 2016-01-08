@@ -1,4 +1,4 @@
-<%=render 'users/index' unless current_user%>
+<%=render 'users/index'%>
       
   <div id="posts" class="transitions-enabled infinite-scroll clearfix">
     <% @posts.each do |post| %>
@@ -10,10 +10,12 @@
         
 
         <% if post.user == current_user %>
-        <%= link_to 'Edit', edit_post_path(post) %>
-        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %> <br/>
-        <%end%>
-        <br/>
+            <%= link_to raw('<span class="glyphicon glyphicon-edit"></span> Edit'), edit_post_path(post) %>
+
+            <%= link_to raw('<span class="glyphicon glyphicon-trash"></span> Delete'), post, method: :delete, data: { confirm: 'Are you sure?' } %> 
+
+            <%end%>
+        
    
       </div>
     <% end %>

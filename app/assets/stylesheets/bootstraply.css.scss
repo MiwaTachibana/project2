@@ -1,5 +1,7 @@
 $navbar-height: 50px;
-$navbar-default-link-color: #ff4d4d;
+$navbar-default-brand-color: #ff4d4d;
+$jumbotron-heading-color: #FF4D4D;
+
 
 
 @import "bootstrap-sprockets";
@@ -9,4 +11,21 @@ $navbar-default-link-color: #ff4d4d;
 
 .center {
 	text-align: center;
+}
+
+#logo {
+	float: left;
+	font-size: 1.7em;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-weight: bold;
+}
+
+#logo:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+.jumbotron {
+	background: url("http://lh5.ggpht.com/-8TTH9eJgysY/Th6aCYhRJWI/AAAAAAAAPTo/9EEFV5zDvOw/polaroid-wood%25255B3%25255D.jpg?imgmax=800")
 }

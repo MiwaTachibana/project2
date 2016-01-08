@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate
       unless logged_in?
-        flash[:error] = "You must be logged in to access this section of the site"
+        flash[:error] = "Woops! You must be logged in to see this"
         redirect_to login_form_url
       end
   end
