@@ -36,30 +36,30 @@ If you fork this repo, you must run `bundle install` and `rake db:migrate` in or
 
 Welcome to Pin It!
 <br>
-![Petnet Landing Page](app/assets/images/homepage.png)
+![Alt text](app/assets/images/homepage.png)
 
 ######Step 1: Create a Pin It
 
 Enter your information in the form:
 <br>
-![Sign Up Page](app/assets/images/signup.png)
+![Alt text](app/assets/images/signup.png)
 <br>
 
 ######Step 2: Create a Pin
 
 Then fill in the information here and upload a photo
 <br>
-![Add Pet Modal](app/assets/images/newpin.png)
+![Alt text](app/assets/images/newpin.png)
 
 
 
 ######Now you have a post!
 <br>
-![Pet Parent Profile](app/assets/images/posts.png)
+![Alt text](app/assets/images/posts.png)
 
 ######You can see all of the other pets on pin it...
 <br>
-![Pets Directory](app/assets/images/allposts.png)
+![Alt text](app/assets/images/allposts.png)
 
 
 
