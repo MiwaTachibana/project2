@@ -5,8 +5,9 @@
       
  	<div class="box">
         <%= link_to image_tag(post.image.url(:medium) ), post%> <br/>
-        <%= post.description %> <br/>
-        <strong><%= post.user.name if post.user %> </strong>
+        
+       <div class="description"> <%= post.description %> <br/>
+        <strong><%= post.user.name if post.user %> </strong></div>
         
 
         <% if post.user == current_user %>
