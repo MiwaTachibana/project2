@@ -45,8 +45,6 @@ gem 'masonry-rails', '~> 0.2.4'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-ruby '2.2.1'
-
 group :production do
   gem 'rails_12factor'
 end
