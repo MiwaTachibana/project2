@@ -27,5 +27,18 @@ $jumbotron-heading-color: #FF4D4D;
 }
 
 .jumbotron {
-	background: url("http://lh5.ggpht.com/-8TTH9eJgysY/Th6aCYhRJWI/AAAAAAAAPTo/9EEFV5zDvOw/polaroid-wood%25255B3%25255D.jpg?imgmax=800")
+	background: url("http://lh5.ggpht.com/-8TTH9eJgysY/Th6aCYhRJWI/AAAAAAAAPTo/9EEFV5zDvOw/polaroid-wood%25255B3%25255D.jpg?imgmax=800");
+	background-sie: cover;
+	height: 200px
 }
+
+
+
+.jumbotron h1 {
+	letter-spacing: 1px;
+	font-family: 'Brush Script MT';
+	text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+	margin: 10px 0 24px;
+	text-shadow: #5A5859 -1px -1px;
+}
+

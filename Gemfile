@@ -36,6 +36,8 @@ gem 'jquery-turbolinks'
 
 gem 'masonry-rails', '~> 0.2.4'
 
+
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
