@@ -1,28 +1,19 @@
-== README
+#Pin It
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Alt text](https://upload.wikimedia.org/wikipedia/en/1/19/Pinterest_home_page.png)
 
-Things you may want to cover:
+##Description
+A photosharing site that is open to everyone.
 
-* Ruby version
+##Functions 
+Anyone can view the listing of all posts
+However, you must register in order to submit your own posts, to like other's posts, and to comment on other posts
 
-* System dependencies
+Members can edit only their own posts
 
-* Configuration
+Members can see a listing of their own posts and of other member's posts
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Members can see a listing of all the posts they've liked. 
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
