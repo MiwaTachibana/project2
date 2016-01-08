@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
 #posts
 
+  root 'posts#index'
   get 'posts' => 'posts#index', as: :posts
   
   post 'posts' => 'posts#create'
@@ -21,7 +22,7 @@ Rails.application.routes.draw do
 
   #users
 
-  root 'users#index'
+ 
   
   get 'users/index' => 'users#index'
 

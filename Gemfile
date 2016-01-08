@@ -32,6 +32,10 @@ gem 'paperclip', '~> 4.3', '>= 4.3.2'
 
 gem 'aws-sdk', '~> 2.2', '>= 2.2.9'
 
+gem 'jquery-turbolinks'
+
+gem 'masonry-rails', '~> 0.2.4'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

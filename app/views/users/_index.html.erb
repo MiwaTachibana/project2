@@ -1,11 +1,14 @@
 <div class="jumbotron center">
-	<h1> Welcome! </h1>
-
-
-	<% @users.each do |user| %>
-		<%= link_to user.name, user_path(user) %> 
+	<% if current_user %>
+	<h1> Good To See You <%= current_user.name %>!</h1>
+	<%else%>
+	<h1>Welcome!</h1>
 	<%end%>
 
+
+	
+
+	
 	<% if current_user %>
 	 	<%= link_to 'See Your Posts', posts_path, class: 'btn btn-default' %>
 	 	
@@ -17,3 +20,4 @@
 	<%end%>
 	
 </div>
+

@@ -1,32 +1,23 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Posts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>Descripton</th>
-      <th>Title</th>
+<%=render 'users/index' unless current_user%>
       
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+  <div id="posts" class="transitions-enabled infinite-scroll clearfix">
     <% @posts.each do |post| %>
-      <tr>
-        <td><%= image_tag post.image.url(:thumb) %>
-        <td><%= post.description %></td>
+      
+ 	<div class="box">
+        <%= link_to image_tag(post.image.url(:medium) ), post%> <br/>
+        <%= post.description %> <br/>
+        <strong><%= post.user.name if post.user %> </strong>
         
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+
+        <% if post.user == current_user %>
+        <%= link_to 'Edit', edit_post_path(post) %>
+        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %> <br/>
+        <%end%>
+        <br/>
+   
+      </div>
     <% end %>
-  </tbody>
-</table>
+ </div>
 
-<br>
 
-<%= link_to 'New Post', new_post_path %>
+

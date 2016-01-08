@@ -39,10 +39,11 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to 'About Me', users_about_path %></li>
         <li><%= link_to 'Home', users_path%></li>
+        <li><%= link_to 'See Posts', posts_path %>
 
         <% if current_user %>
           <li><%= link_to 'Logout', logout_path, method: :delete, data: {confirm: 'Are you sure?'} %></li>
-          <li><%= link_to 'See Your Posts', posts_path %>
+          
           <li><%= link_to 'Make a New Pin', new_post_path %>
 
         <%else%>
