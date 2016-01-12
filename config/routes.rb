@@ -26,72 +26,39 @@ Rails.application.routes.draw do
 
  
   
-  get 'users/index' => 'users#index'
-
-
+  get 'users/index' => 'users#index', as: :users
 
   get 'users/myposts' => 'users#myposts'
 
+  post 'users' => 'users#create'
+
   get 'users/new' => 'users#new', as: :new_user
-
-  post 'users/' => 'users#create'
-
-  get 'users/:id' => 'users#show', as: :user
 
   get 'users/:id/edit' => 'users#edit', as: :edit_user
 
-  patch 'users/:id' => 'users#update'
+  get 'users/:id' => 'users#show', as: :user
+
+  put 'users/:id' => 'users#update'
 
   delete 'users/:id' => 'users#destroy'
 
-  #sessions
-  get 'login' => 'sessions#new', as: :login_form
-
-  post 'sessions/create' => 'sessions#create'
-
-  delete 'logout' => 'sessions#destroy' 
-
-
-
-  resources :posts
-  resources :users
-
-  # get 'login', to: 'sessions#new'
-  # delete "logout", to: "sessions#destroy"
-  resources :sessions
-
-  #  root 'users#index'
-  # get '/users' => 'users#index', as: :users
-
-  # post '/users' => 'users#create'
-
-  # get '/users/new' => 'users#new', as: :new_user
-
-  # get '/users/:id/edit' => 'users#edit', as: :edit_user
-
-  # get '/users/:id' => 'users#show', as: :user
-
-  # put '/users/:id' => 'users#update'
-
-  # delete '/users/:id' => 'users#destroy'
-
-  # get '/users/about' => 'users#about', as: :users_about
-
   # #sessions
 
-  # get '/sessions' => 'sessions#index'
+  get 'sessions' => 'sessions#index', as: :sessions
 
-  # post '/sessions' => 'sessions#create'
+  post 'sessions' => 'sessions#create'
 
-  # get 'login' => 'sessions#new', as: :new_session
+  get 'login' => 'sessions#new', as: :login_form
 
-  # get '/sessions/:id/:edit' => 'sessions#edit', as: :edit_session
+  get 'sessions/new' => 'sessions#new', as: :new_session
 
-  # get '/session/:id' => 'session#show', as: :session
+  get 'sessions/:id/edit' => 'sessions#edit', as: :edit_session
 
-  # put '/sessions/:id' => 'session#update'
+  get 'sessions/:id' => 'sessions#show', as: :session
 
-  # delete 'logout' => 'session#destroy'
+  put 'sessions/:id' => 'sessions#update' 
+
+  delete 'logout' => 'sessions#destroy' 
 
 
 
