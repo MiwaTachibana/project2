@@ -30,7 +30,7 @@ Members can see a listing of all the posts they've liked.
 
 #### Getting Started
 
-If you fork this repo, you must run `bundle install` and `rake db:migrate` in order for the app to function properly.
+If you fork this repo, you must run `bundle install` and `rake db:migrate` in order for the app to function properly. This app has not been deployed, so you must run your rails server and go to http://localhost:3000
 
 #### Joining Pin It
 
